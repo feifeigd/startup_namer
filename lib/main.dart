@@ -1,5 +1,5 @@
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
+import 'package:startup_namer/random.words.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,7 +9,6 @@ class MyApp extends StatelessWidget { // 不可变组件
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    final wordPair = WordPair.random();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -31,7 +30,7 @@ class MyApp extends StatelessWidget { // 不可变组件
           title: Text('Welcome to Flutter'),
         ),
         body: Center(
-          child: Text(wordPair.asPascalCase),
+          child: RandomWords(),
         ),
       ),
     );
